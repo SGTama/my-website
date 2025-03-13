@@ -2,11 +2,191 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My First Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>SULVA | Sanitary Valves & Fittings Indonesia</title>
+  <style>
+    :root {
+      --primary-color: #004d80;
+      --highlight-color: #ffde59;
+      --text-color: #000;
+      --hero-text-color: #808080;
+      --background-color: #ffffff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: var(--background-color);
+      color: var(--primary-color);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    nav {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+      font-size: 1rem;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background-color: var(--highlight-color);
+      transition: width 0.3s ease-in-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(135deg, #e8f4f8, #60a8d8);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      color: var(--hero-text-color);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background-color: var(--background-color);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .slideshow {
+      max-width: 1000px;
+      margin: 40px auto;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    .slides {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 300px;
+      border-radius: 8px;
+    }
+
+    .content {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      color: var(--text-color);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: var(--primary-color);
+      color: var(--highlight-color);
+      border-top: 2px solid var(--highlight-color);
+    }
+
+    .slideshow img[alt] {
+      aria-label: 'Product Image';
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Hello from my GitHub website!</h1>
-  <p>I'm learning to create websites on GitHub Pages.</p>
+  <header>
+    <h1>SULVA</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="industries.html">Industries</a>
+      <a href="why-choose-us.html">Why Choose Us</a>
+      <a href="technical-documents.html">Technical Documents</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Stainless Steel Sanitary Valves, Pipes & Fittings</h2>
+      <p>High-Quality Hygienic Solutions for Food & Pharmaceutical Industries</p>
+    </div>
+  </section>
+
+  <section class="slideshow" aria-label="Product slideshow">
+    <div class="slides">
+      <img src="product1.jpg" alt="Product 1">
+      <img src="product2.jpg" alt="Product 2">
+      <img src="product3.jpg" alt="Product 3">
+    </div>
+  </section>
+
+  <section class="content">
+    <h2>Welcome to SULVA</h2>
+    <p>Explore our high-quality stainless steel products and solutions for food and pharmaceutical industries.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 SULVA | All Rights Reserved</p>
+  </footer>
+
 </body>
 </html>
